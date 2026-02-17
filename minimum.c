@@ -1,23 +1,19 @@
 #include <stdio.h>
-int minimum_element();
 int main(){
-   int result;
-   result = minimum_element();
-   printf("minimum result is %d:",result);
-   return 0;
-}
-
-int minimum_element(){
-    int num[] ={1,2,3,4,5,6};
-    int min = num[0];
-
-    for( int i=1;i<6;i++){
-        if(num[i] < min){
-            min = num[i];
+    int a[10] = {1,2,3,4,5,6,7,8,9,10};
+    int max = a[0];
+    int min = a[0];
+    for(int i=0;i<10;i++){
+        if(max<a[i]){
+            max = a[i];
+        }
+        if(min>a[i]){
+            min = a[i];
+            
         }
     }
-    return min;
+    printf("%d\n",max);
+    printf("%d",min);
+    return 0;
+
 }
-
-
-
